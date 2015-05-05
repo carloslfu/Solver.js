@@ -7,7 +7,7 @@ $(document).ready(function() {
 	ga.postMessage({cmd:'init'});
 	subga.postMessage({cmd:'init'});
 	
-	ga.onmessage=function(e){
+	ga.onmessage = function(e) {
 		switch(e.data.type)
 		{
 			case 'info':
@@ -24,7 +24,7 @@ $(document).ready(function() {
 		}
 	}
 
-	subga.onmessage=function(e){
+	subga.onmessage = function(e) {
 		switch(e.data.type)
 		{
 			case 'migration':
@@ -36,26 +36,26 @@ $(document).ready(function() {
 		}
 	}
 
-	$("#ejecutar").click(function(){
+	$("#run").click(function() {
 		ga.postMessage({cmd:'conf',migrationAt:4,objetive:objetive});
 		subga.postMessage({cmd:'conf',migrationAt:4,migratorsprop:0.3,objetive:objetive});
 		ga.postMessage({cmd:'start',num:$("#num").val()});
 		subga.postMessage({cmd:'start',num:$("#num").val()});
 	});
-	$("#reiniciar").click(function(){
+	$("#reset").click(function() {
 		ga.postMessage({cmd:'init'});
 		subga.postMessage({cmd:'init'});
-		$("#limpiar").click();
+		$("#clear").click();
 	});
-	$("#limpiar").click(function(){
+	$("#clear").click(function() {
 		$('#out').html('');
 	});
 });
 var numscroll=0;
-function println(out,str){
+function println(out,str) {
 	out.html(out.html()+str+'<br>');
 }
-function scrolldown(out){
+function scrolldown(out) {
 	if(numscroll==1){
 		out.animate({scrollTop: out[0].scrollHeight},10);//scroll abajo
 		numscroll=0;

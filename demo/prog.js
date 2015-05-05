@@ -8,14 +8,14 @@ $(document).ready(function() {
 	grupo.postMessage({cmd:'add',islands:(new Ojs(islas)).toStr()});
 	grupo.postMessage({cmd:'init'});
 
-	$("#ejecutar").click(function(){
+	$("#run").click(function(){
 		grupo.postMessage({cmd:'start',num:$("#num").val()});
 	});
-	$("#reiniciar").click(function(){
+	$("#reset").click(function(){
 		grupo.postMessage({cmd:'init'});
-		$("#limpiar").click();
+		$("#clear").click();
 	});
-	$("#limpiar").click(function(){
+	$("#clear").click(function(){
 		$('#out').html('');
 	});
 });
