@@ -7,7 +7,7 @@ This library uses genetic algorithms to solve the problems and this runs in a wo
 ## TODOs
 
 - Optimize core and avoid use object.js library (rewrite all core in vanilla js).
-- Rewrite core for a simple API, and some missing features of a private proyect.
+- Rewrite core for a simple API, and some missing features of the private proyect.
 - Build system with Grunt.
 - Make some examples and publish a task scheduler app (now private).
 - Port to node.js.
