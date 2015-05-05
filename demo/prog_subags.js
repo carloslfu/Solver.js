@@ -57,7 +57,7 @@ function println(out,str) {
 }
 function scrolldown(out) {
 	if(numscroll==1){
-		out.animate({scrollTop: out[0].scrollHeight},10);//scroll abajo
+		out.animate({scrollTop: out[0].scrollHeight},10);//scroll down
 		numscroll=0;
 	}
 	numscroll++;
