@@ -1,0 +1,19 @@
+Objectjs library(Ojs) - last version relase 1.0
+
+-what is this?: Is a javascript based library for easy handling of objects.
+-What can I do? you can do whatever you can think, if it cant do with Objectjs send your idea and if you want collaborate on their development
+-give me an example:
+if you want to convert to JSON string your object and it contains functions, the standard JSON.stringify function does not suport that, but in Ojs is simple:
+
+*include a object.js library in your code.
+*code:
+//target to convert to JSON string
+target={"k":function (){console.log("adasd");},"i":1,"f":"1","obj":{"k":function (){console.log("adasd");},"i":1,"f":"1"}};
+json_str=(new Ojs(target)).toStr();//this is your json string
+//to decode the string
+object_decoded=(new Ojs()).toOjs(json_str).toClearObj();
+//now you can call your functions and access to your object_decoded
+//Ojs support nested objects
+*you can too:
+-manage your object like an array with objectAt(), objectNameAt(),last(),last(),lastObjectName() and more functions
+-get the length of your object with getLength()
